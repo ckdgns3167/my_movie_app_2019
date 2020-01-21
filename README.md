@@ -186,5 +186,11 @@ react component는 render()말고도 다른 메서드들을 갖는다. life cycl
 
   이것은 state를 지켜준다. 즉 저장한다. 그래서 굳이 새로 state를 불러와서 불필요한 작업을 하게 하지 않고 전의 state를 저장하고 있기 때문에 그것을 보고 로딩을 줄일 수 있다.
 
+----
+
+사이트 URL
+
+https://ckdgns3167.github.io/my_movie_app_2019
+
 
 
