@@ -96,6 +96,8 @@ react component는 render()말고도 다른 메서드들을 갖는다. life cycl
 
 4. 마지막으로 npm run deploy를 실행시켜주면 우리의 웹사이트가 publish되고 https://ckdgns3167.github.io/my_movie_app_2019로 들어가서 확인할 수 있다.
 
+![K-001](https://user-images.githubusercontent.com/52457180/72794406-4a1ab980-3c7f-11ea-831f-614fd35f768c.png)
+
 ----
 
 ## 6.기타
@@ -114,11 +116,75 @@ react component는 render()말고도 다른 메서드들을 갖는다. life cycl
 
 2. 하지만 class component가 구식인 것은 아니다. 일을 하는 다른 방식일 뿐 react hook이 이것의 대체물이 아니다!
 
+----
+
 ## 7.마지막으로
 
 다음 강의로 ReactJS 중급 강의를 들을 것이다. 이 강의는 유료인데, 더 많은 것을 배울 것이다. 초급에서는 한 페이지만 만들어봤지만 여러개의 페이지를 만들어 연결시키는 등 새로운 것을 한다.
 
+-----
 
+## 8.추가 내용(심화)
+
+- 네비게이션 추가하기(라우터 사용하기)
+
+  react-router-dom 이란 것을 사용한다. 이것은 네비게이션을 만들어 주는 패키지이다. 라우터란 쉽게 말하자면 url을 확인하고 해당 컴포넌트를 불러와 주는 것이다.  
+
+  - 설치 : npm i react-router-dom 
+
+  - App.js 코드
+
+    ```javascript
+    import React from 'react';
+    import { HashRouter, Route } from "react-router-dom";
+    import Home from "./routes/Home";
+    import About from "./routes/About";
+    import Navigation from "./components/Navigation";
+    import "./App.css";
+    
+    function App() {
+      return <HashRouter>
+        <Navigation />// 네비게이션
+        <Route path="/" exact={true} component={Home} />
+        <Route path="/about" component={About} />
+      </HashRouter>;
+    
+    }
+    // exact={true}를 넣어주지 않으면 react 라우터는 url 주소에 /이 들어가 있다면 무저건 home 화면을 랜더링하기 때문에 우리가 원하는 화면을 볼 수 없다. 
+    export default App;
+    ```
+
+  - Navigarion.js 코드
+
+    ```javascript
+    import React from "react";
+    import { Link } from "react-router-dom";//<-- import 
+    import "./Navigation.css";
+    
+    function Navigation() {
+        //<Link>태그가 아닌 <a>태그로 href를 사용하여 코딩하면 클릭하면 react가 죽고 화면이 새로고침되기 때문에 우리가 원하는 것이 아니다. 우리가 원하는 것은 화면이 새로고침 되지 않고 인터랙션을 원하는 것이다. 
+        return (
+            <div className="nav">
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+            </div>
+        );
+    }
+    
+    export default Navigation;
+    ```
+
+  - 결과 화면
+
+    ![K-002](https://user-images.githubusercontent.com/52457180/72794443-57d03f00-3c7f-11ea-8110-4294139fbce1.png)
+
+- 라우터들 사이에서 props 공유하기 ( route porps )
+
+  클릭으로 데이터를 전달할 수 있다. 링크를 통해 정보르 라우터로 보낼 수 있다. 예를 들어 영화 하나를 선택하면 그 영화의 detail을 볼 수 있는 화면으로 넘어갈 때 정보를 전달하게 한다. Link태그를 사용하여 한다. 페이지 리다이렉팅도 배웠다. 
+
+- redux 알기 
+
+  이것은 state를 지켜준다. 즉 저장한다. 그래서 굳이 새로 state를 불러와서 불필요한 작업을 하게 하지 않고 전의 state를 저장하고 있기 때문에 그것을 보고 로딩을 줄일 수 있다.
 
 
 
