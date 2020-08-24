@@ -1,6 +1,6 @@
 # ReactJS 연습 프로젝트 (영화 정보 API를 통해 얻은 데이터들을 화면에 예쁘게 뿌려주기)
 
-
+**deploy된 사이트 주소**: https://ckdgns3167.github.io/my_movie_app_2019
 
 **필요한 툴**
 
@@ -90,7 +90,7 @@ react component는 render()말고도 다른 메서드들을 갖는다. life cycl
    2. build라는 파일은 **npm run build** 명령어를 통해 생성한다. 
    3. 두 번째로 **"predeploy": "npm run build"를 추가**한다. deploy를 호출하기 전 마다 호출되는 script이다. 유의할 것은 pre~ 뒤에 이름이 같아야 동작한다. 
 
-4. 마지막으로 npm run deploy를 실행시켜주면 우리의 웹사이트가 publish되고 https://ckdgns3167.github.io/my_movie_app_2019로 들어가서 확인할 수 있다.
+4. 마지막으로 npm run deploy를 실행시켜주면 우리의 웹사이트가 publish되고 https://ckdgns3167.github.io/my_movie_app_2019 로 들어가서 확인할 수 있다.
 
 ![K-001](https://user-images.githubusercontent.com/52457180/72794406-4a1ab980-3c7f-11ea-831f-614fd35f768c.png)
 
