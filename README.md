@@ -1,4 +1,7 @@
-# ReactJS 연습 프로젝트 (영화 정보 API를 통해 얻은 데이터들을 화면에 예쁘게 뿌려주기)
+# ReactJS 연습 프로젝트 
+### 영화 정보 API를 통해 얻은 데이터들을 화면에 예쁘게 뿌려주기
+
+-----
 
 **deploy된 사이트 주소**: https://ckdgns3167.github.io/my_movie_app_2019
 
