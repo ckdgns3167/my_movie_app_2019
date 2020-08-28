@@ -45,11 +45,12 @@
 
 **해당 프로젝트를 git에 추가하는 방법.** 
 
-1. 해당 프로젝트 경로에서 **git init** 명령어 입력. 그러면 git 저장소를 초기화하라고 안내문 출력됨.
-2. www.github.com/com/new 로 이동해서 저장소를 생성해주자. 
-3. 생성 버튼을 누른 후 다음 페이지의 URL을 복사한다. 
-4. 그 다음 git remote add origin https://github.com/ckdgns3167/my_movie_app_2019 과 같이 터미널에서 입력해주면 추가가 된다. 
-5. 그 다음 git add . => git commit -m "커밋 내용" => git push 하면 끄읕~ 
+1. 해당 프로젝트 경로에서 **git init** 명령어 입력. 그러면 git 저장소를 초기화하라고 안내문 출력됨. (.git이 이미 있으면 삭제하고 진행)
+2. www.github.com/로 이동해서 저장소를 생성해주자. 
+3. 저장소의 URI를 복사한다. 
+4. 그 다음 git remote add origin https://github.com/ckdgns3167/my_movie_app_2019 과 같이 터미널에 입력한다. 
+5. 그 다음 git add . => git commit -m "커밋 내용" => git push 하면 끝. 
+(pull을 해야 한다고 안내문이 나오는데 git pull origin 브런치명 --allow-unrelated-histories를 입력하고 충돌이 일어나면 해결 후 push해준다.)
 
 ----------
 
